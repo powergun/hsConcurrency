@@ -27,9 +27,9 @@ library:
   source-dirs: src
 
 executables:
-  par-exe:
+  par-simple:
     main:                Main.hs
-    source-dirs:         app
+    source-dirs:         app/simple
     ghc-options:
     - -threaded
     - -rtsopts
