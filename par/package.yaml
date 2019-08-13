@@ -32,7 +32,16 @@ executables:
     source-dirs:         app/simple
     ghc-options:
     - -threaded
-    - -rtsopts
+    - -rtsopts 
+    - -with-rtsopts=-N
+    dependencies:
+    - par
+  par-map:
+    main: Main.hs
+    source-dirs: app/parMap
+    ghc-options:
+    - -threaded
+    - -rtsopts -eventlog
     - -with-rtsopts=-N
     dependencies:
     - par

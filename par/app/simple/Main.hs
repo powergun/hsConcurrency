@@ -15,6 +15,7 @@ main = do
         -- stack run par-simple --rts-options -N4
         -- (4 cores; see the difference in htop when given -N2)
         -- '-s' to profile
+        -- NOTE: --profile will introduce massive slow down
         a <- rpar (show . f $ 41)
         b <- rpar (show . f $ 30)
         c <- rpar (show . f $ 39)
