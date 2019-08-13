@@ -37,6 +37,15 @@ f n | n <= 0 = 0
     | n == 1 = 1
     | otherwise = f (n - 1) + f (n - 2)
 
+-- para and con haskell L770
+-- ghc runtime system can tell us how many sparks are created
+
+-- stack run par-map --rts-options -s
+
+-- SPARKS: 14(2 converted, 0 overflowed, 0 dud, 0 GC'd, 12 fizzled)
+-- they are all converted - that is, turned into real parallalism
+-- at runtime
+
 main :: IO ()
 main = do
   let workloads = [10..20] ++ [35, 36, 37]
