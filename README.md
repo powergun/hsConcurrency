@@ -1,8 +1,6 @@
 # Haskell Concurrency
 
-source:
-
-https://www.fpcomplete.com/blog/2017/06/readert-design-pattern
+source: <https://www.fpcomplete.com/blog/2017/06/readert-design-pattern>
 
 Note, this article is about the ReaderT design pattern, but it
 shows that, using mutable ref has its advantages, such as solving
