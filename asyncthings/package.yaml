@@ -27,8 +27,17 @@ library:
   source-dirs: src
 
 executables:
-  asyncthings-exe:
-    main: Main.hs
+  concise:
+    main: async-concise.hs
+    source-dirs: app
+    ghc-options:
+      - -threaded
+      - -rtsopts
+      - -with-rtsopts=-N
+    dependencies:
+      - asyncthings
+  concurrently:
+    main: concurrently.hs
     source-dirs: app
     ghc-options:
       - -threaded
